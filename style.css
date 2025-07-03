@@ -41,7 +41,30 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+.contact {
+  background-color: #e3f2fd;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 4px solid #42a5f5;
+}
 
+.wa-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #25d366;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.wa-button:hover {
+  background-color: #1ebd5b;
+}
 button:hover {
   background-color: #005bb5;
 }
