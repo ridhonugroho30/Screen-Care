@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Screen-Care - Skrining Awal Kesehatan</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>🩺 Screen-Care</h1>
+    <p>Deteksi Dini untuk Masa Depan Lebih Sehat</p>
+  </header>
+
+  <section class="hero">
+    <img src="https://cdn.pixabay.com/photo/2020/04/09/09/50/check-up-5010176_1280.jpg" alt="Skrining Kesehatan">
+  </section>
+
+  <section class="content">
+    <h2>Checklist Skrining Mandiri</h2>
+    <p>Centang kondisi berikut jika sesuai dengan Anda:</p>
+
+    <form id="checklist-form">
+      <label><input type="checkbox" value="1"/> Usia saya di atas 30 tahun</label><br/>
+      <label><input type="checkbox" value="1"/> Ada riwayat keluarga diabetes atau hipertensi</label><br/>
+      <label><input type="checkbox" value="1"/> Saya merokok atau sering terpapar asap rokok</label><br/>
+      <label><input type="checkbox" value="1"/> Saya kurang berolahraga dan sering duduk lama</label><br/>
+      <label><input type="checkbox" value="1"/> Saya memiliki berat badan berlebih/obesitas</label><br/>
+      <label><input type="checkbox" value="1"/> Saya sering merasa lelah, haus, atau buang air kecil berlebihan</label><br/>
+      <label><input type="checkbox" value="1"/> Saya belum pernah cek gula darah/kolesterol tahun ini</label><br/>
+      <label><input type="checkbox" value="1"/> Saya mengalami stres berat atau gangguan tidur</label><br/>
+      <label><input type="checkbox" value="1"/> Saya belum pernah skrining kanker (Pap Smear / PSA)</label><br/><br/>
+
+      <button type="button" onclick="hitungRisiko()">Lihat Hasil Skrining</button>
+    </form>
+
+    <div id="hasil" class="hasil"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Screen-Care Indonesia – Bersama Menuju Hidup Lebih Sehat</p>
+  </footer>
+
+  <script>
+    function hitungRisiko() {
+      const ceklis = document.querySelectorAll('input[type="checkbox"]:checked');
+      const hasil = document.getElementById("hasil");
+
+      if (ceklis.length >= 5) {
+        hasil.innerHTML = `
+          <h3>⚠️ Hasil Skrining: Risiko Tinggi</h3>
+          <p>Anda disarankan segera melakukan pemeriksaan kesehatan lengkap di fasilitas layanan kesehatan terdekat.</p>
+        `;
+        hasil.style.backgroundColor = "#ffebee";
+      } else if (ceklis.length >= 3) {
+        hasil.innerHTML = `
+          <h3>🔶 Hasil Skrining: Risiko Sedang</h3>
+          <p>Anda disarankan untuk memperbaiki gaya hidup dan melakukan pemeriksaan dasar (gula darah, tekanan darah, dll).</p>
+        `;
+        hasil.style.backgroundColor = "#fffde7";
+      } else {
+        hasil.innerHTML = `
+          <h3>✅ Hasil Skrining: Risiko Rendah</h3>
+          <p>Hasil Anda cukup baik. Tetap pertahankan gaya hidup sehat dan lakukan skrining tahunan secara rutin.</p>
+        `;
+        hasil.style.backgroundColor = "#e8f5e9";
+      }
+
+      hasil.style.padding = "1rem";
+      hasil.style.border = "1px solid #ccc";
+      hasil.style.marginTop = "1rem";
+      hasil.style.borderRadius = "6px";
+    }
+  </script>
+</body>
+</html>
