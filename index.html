@@ -1,83 +1,194 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Screen-Care - Skrining Awal Kesehatan</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesehatan Kita - Skrining Penyakit Lengkap</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>🩺 Screen-Care</h1>
-    <p>Deteksi Dini untuk Masa Depan Lebih Sehat</p>
-  </header>
+    <header class="hero">
+        <div class="container">
+            <nav>
+                <div class="logo">Kesehatan<span>Kita</span></div>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#skrining">Skrining</a></li>
+                    <li><a href="#artikel">Artikel</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Jaga Kesehatan Anda, Kenali Dini Penyakit!</h1>
+                    <p>Mulai skrining kesehatan Anda sekarang dan dapatkan interpretasi hasil yang akurat.</p>
+                    <a href="#skrining" class="btn btn-primary">Mulai Skrining</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/400x300/a2d9ff/ffffff?text=Dokter+Tersenyum" alt="Dokter Tersenyum" class="animate-float">
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <section class="hero">
-    <img src="https://cdn.pixabay.com/photo/2020/04/09/09/50/check-up-5010176_1280.jpg" alt="Skrining Kesehatan">
-  </section>
+    <main>
+        <section id="skrining" class="skrining-section">
+            <div class="container">
+                <h2>Skrining Kesehatan Anda</h2>
+                <p class="section-description">Pilih gejala atau kondisi yang Anda alami untuk mendapatkan potensi interpretasi.</p>
+                <form id="skrining-form" class="skrining-form">
+                    <div class="skrining-category">
+                        <h3><i class="fas fa-lungs"></i> Sistem Pernapasan</h3>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="gejala" value="batuk_kronis"> Batuk Kronis (lebih dari 3 minggu)</label>
+                            <label><input type="checkbox" name="gejala" value="sesak_napas"> Sesak Napas</label>
+                            <label><input type="checkbox" name="gejala" value="nyeri_dada"> Nyeri Dada saat bernapas</label>
+                            <label><input type="checkbox" name="gejala" value="dahak_berdarah"> Dahak Berdarah</label>
+                        </div>
+                    </div>
 
-  <section class="content">
-    <h2>Checklist Skrining Mandiri</h2>
-    <p>Centang kondisi berikut jika sesuai dengan Anda:</p>
+                    <div class="skrining-category">
+                        <h3><i class="fas fa-stomach"></i> Sistem Pencernaan</h3>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="gejala" value="nyeri_perut"> Nyeri Perut Berulang</label>
+                            <label><input type="checkbox" name="gejala" value="diare_kronis"> Diare Kronis</label>
+                            <label><input type="checkbox" name="gejala" value="konstipasi"> Konstipasi Berkepanjangan</label>
+                            <label><input type="checkbox" name="gejala" value="mual_muntah"> Mual dan Muntah Sering</label>
+                        </div>
+                    </div>
 
-    <form id="checklist-form">
-      <label><input type="checkbox" value="1"/> Usia saya di atas 30 tahun</label><br/>
-      <label><input type="checkbox" value="1"/> Ada riwayat keluarga diabetes atau hipertensi</label><br/>
-      <label><input type="checkbox" value="1"/> Saya merokok atau sering terpapar asap rokok</label><br/>
-      <label><input type="checkbox" value="1"/> Saya kurang berolahraga dan sering duduk lama</label><br/>
-      <label><input type="checkbox" value="1"/> Saya memiliki berat badan berlebih/obesitas</label><br/>
-      <label><input type="checkbox" value="1"/> Saya sering merasa lelah, haus, atau buang air kecil berlebihan</label><br/>
-      <label><input type="checkbox" value="1"/> Saya belum pernah cek gula darah/kolesterol tahun ini</label><br/>
-      <label><input type="checkbox" value="1"/> Saya mengalami stres berat atau gangguan tidur</label><br/>
-      <label><input type="checkbox" value="1"/> Saya belum pernah skrining kanker (Pap Smear / PSA)</label><br/><br/>
+                    <button type="submit" class="btn btn-secondary">Lihat Hasil Skrining</button>
+                </form>
 
-      <button type="button" onclick="hitungRisiko()">Lihat Hasil Skrining</button>
-    </form>
+                <div id="hasil-skrining" class="hasil-skrining" style="display: none;">
+                    <h3>Hasil Skrining Anda:</h3>
+                    <div id="interpretasi-detail" class="interpretasi-detail">
+                        </div>
+                    <p class="catatan">Catatan: Hasil ini hanyalah interpretasi awal dan bukan diagnosis medis. Selalu konsultasikan dengan tenaga medis profesional untuk diagnosis dan penanganan lebih lanjut.</p>
+                </div>
+            </div>
+        </section>
 
-    <div id="hasil" class="hasil"></div>
-  </section>
+        <section id="artikel" class="artikel-section">
+            <div class="container">
+                <h2>Artikel Kesehatan Pilihan</h2>
+                <div class="artikel-grid">
+                    <div class="artikel-card">
+                        <img src="https://via.placeholder.com/300x200/c7f0d0/000000?text=Hidup+Sehat" alt="Hidup Sehat">
+                        <h3>Manfaat Pola Hidup Sehat</h3>
+                        <p>Pelajari bagaimana kebiasaan sehat dapat meningkatkan kualitas hidup Anda...</p>
+                        <a href="#" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="artikel-card">
+                        <img src="https://via.placeholder.com/300x200/c7f0d0/000000?text=Pencegahan" alt="Pencegahan Penyakit">
+                        <h3>Pentingnya Vaksinasi Dewasa</h3>
+                        <p>Vaksinasi tidak hanya untuk anak-anak, dewasa juga membutuhkan perlindungan...</p>
+                        <a href="#" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="artikel-card">
+                        <img src="https://via.placeholder.com/300x200/c7f0d0/000000?text=Mental+Sehat" alt="Kesehatan Mental">
+                        <h3>Kiat Menjaga Kesehatan Mental</h3>
+                        <p>Stres bisa menyerang siapa saja. Yuk, kenali cara mengelola stres dengan baik...</p>
+                        <a href="#" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Screen-Care Indonesia – Bersama Menuju Hidup Lebih Sehat</p>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kesehatan Kita. Semua Hak Dilindungi.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 
-  <script>
-    function hitungRisiko() {
-      const ceklis = document.querySelectorAll('input[type="checkbox"]:checked');
-      const hasil = document.getElementById("hasil");
+    <script>
+        document.getElementById('skrining-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form reload halaman
 
-      if (ceklis.length >= 5) {
-        hasil.innerHTML = `
-          <h3>⚠️ Hasil Skrining: Risiko Tinggi</h3>
-          <p>Anda disarankan segera melakukan pemeriksaan kesehatan lengkap di fasilitas layanan kesehatan terdekat.</p>
-        `;
-        hasil.style.backgroundColor = "#ffebee";
-      } else if (ceklis.length >= 3) {
-        hasil.innerHTML = `
-          <h3>🔶 Hasil Skrining: Risiko Sedang</h3>
-          <p>Anda disarankan untuk memperbaiki gaya hidup dan melakukan pemeriksaan dasar (gula darah, tekanan darah, dll).</p>
-        `;
-        hasil.style.backgroundColor = "#fffde7";
-      } else {
-        hasil.innerHTML = `
-          <h3>✅ Hasil Skrining: Risiko Rendah</h3>
-          <p>Hasil Anda cukup baik. Tetap pertahankan gaya hidup sehat dan lakukan skrining tahunan secara rutin.</p>
-        `;
-        hasil.style.backgroundColor = "#e8f5e9";
-      }
+            const checkboxes = document.querySelectorAll('#skrining-form input[name="gejala"]:checked');
+            const selectedGejala = Array.from(checkboxes).map(cb => cb.value);
+            const interpretasiDetail = document.getElementById('interpretasi-detail');
+            const hasilSkriningDiv = document.getElementById('hasil-skrining');
 
-      hasil.style.padding = "1rem";
-      hasil.style.border = "1px solid #ccc";
-      hasil.style.marginTop = "1rem";
-      hasil.style.borderRadius = "6px";
-      <section class="contact">
-  <h2>💬 Ingin Bertanya Lebih Lanjut?</h2>
-  <p>Klik tombol di bawah untuk berkonsultasi langsung via WhatsApp:</p>
-  <a class="wa-button" href="https://wa.me/6281234567890?text=Halo%20Screen-Care%2C%20saya%20ingin%20bertanya%20tentang%20skrining%20kesehatan." target="_blank">
-    💬 Tanya via WhatsApp
-  </a>
-</section>
-    }
-  </script>
+            let interpretasiHTML = '';
+
+            if (selectedGejala.length === 0) {
+                interpretasiHTML = '<p class="no-gejala">Anda belum memilih gejala apapun. Silakan pilih gejala yang Anda alami.</p>';
+            } else {
+                interpretasiHTML += '<p class="gejala-terpilih">Gejala yang Anda pilih:</p><ul>';
+                selectedGejala.forEach(gejala => {
+                    interpretasiHTML += `<li>${getGejalaDisplayName(gejala)}</li>`;
+                });
+                interpretasiHTML += '</ul>';
+
+                interpretasiHTML += '<p class="potensi-kondisi">Berdasarkan gejala yang Anda pilih, berikut potensi kondisi yang perlu diwaspadai:</p>';
+
+                // Logika interpretasi sederhana
+                if (selectedGejala.includes('batuk_kronis') || selectedGejala.includes('sesak_napas') || selectedGejala.includes('nyeri_dada')) {
+                    interpretasiHTML += `
+                        <div class="kondisi-item">
+                            <h4>Potensi Masalah Pernapasan</h4>
+                            <p>Gejala seperti batuk kronis, sesak napas, atau nyeri dada dapat mengindikasikan berbagai kondisi pernapasan seperti **bronkitis, asma, PPOK, atau bahkan infeksi paru-paru**. Sangat disarankan untuk berkonsultasi dengan dokter untuk pemeriksaan lebih lanjut, terutama jika gejala memburuk atau disertai demam tinggi dan penurunan berat badan.</p>
+                            <p><strong>Tindakan yang direkomendasikan:</strong> Segera periksakan diri ke dokter spesialis paru. Lakukan rontgen dada atau tes fungsi paru.</p>
+                        </div>
+                    `;
+                }
+                if (selectedGejala.includes('nyeri_perut') || selectedGejala.includes('diare_kronis') || selectedGejala.includes('mual_muntah')) {
+                    interpretasiHTML += `
+                        <div class="kondisi-item">
+                            <h4>Potensi Gangguan Pencernaan</h4>
+                            <p>Nyeri perut berulang, diare kronis, mual, dan muntah bisa menjadi tanda **gastritis, IBS (Irritable Bowel Syndrome), infeksi saluran cerna, atau masalah usus lainnya**. Perhatikan pola makan dan tingkat stres Anda. Hindari makanan pemicu.</p>
+                            <p><strong>Tindakan yang direkomendasikan:</strong> Konsultasi dengan dokter umum atau spesialis penyakit dalam. Pertimbangkan tes feses atau endoskopi jika diperlukan.</p>
+                        </div>
+                    `;
+                }
+                // Tambahkan lebih banyak logika interpretasi di sini
+                if (selectedGejala.includes('jantung_berdebar')) {
+                    interpretasiHTML += `
+                        <div class="kondisi-item">
+                            <h4>Potensi Masalah Jantung</h4>
+                            <p>Jantung berdebar bisa disebabkan oleh banyak hal, mulai dari stres, kafein berlebihan, hingga **aritmia jantung atau masalah tiroid**. Jika disertai nyeri dada, pusing, atau pingsan, segera cari bantuan medis darurat.</p>
+                            <p><strong>Tindakan yang direkomendasikan:</strong> Segera periksakan diri ke dokter, khususnya jika gejala sering terjadi atau parah. Mungkin diperlukan EKG atau pemeriksaan jantung lainnya.</p>
+                        </div>
+                    `;
+                }
+
+                if (interpretasiHTML === interpretasiHTML.split('<p class="potensi-kondisi">')[0] + '<p class="potensi-kondisi">Berdasarkan gejala yang Anda pilih, berikut potensi kondisi yang perlu diwaspadai:</p>') {
+                    interpretasiHTML += '<p class="tidak-ditemukan">Dari gejala yang Anda pilih, tidak ada interpretasi spesifik yang dapat diberikan saat ini. Namun, jika Anda khawatir atau gejala berlanjut, sangat disarankan untuk berkonsultasi dengan dokter.</p>';
+                }
+            }
+
+            interpretasiDetail.innerHTML = interpretasiHTML;
+            hasilSkriningDiv.style.display = 'block'; // Tampilkan hasil
+            hasilSkriningDiv.scrollIntoView({ behavior: 'smooth' }); // Gulir ke hasil
+        });
+
+        // Fungsi pembantu untuk mendapatkan nama tampilan gejala
+        function getGejalaDisplayName(gejalaValue) {
+            const gejalaMap = {
+                'batuk_kronis': 'Batuk Kronis',
+                'sesak_napas': 'Sesak Napas',
+                'nyeri_dada': 'Nyeri Dada saat bernapas',
+                'dahak_berdarah': 'Dahak Berdarah',
+                'nyeri_perut': 'Nyeri Perut Berulang',
+                'diare_kronis': 'Diare Kronis',
+                'konstipasi': 'Konstipasi Berkepanjangan',
+                'mual_muntah': 'Mual dan Muntah Sering',
+                'jantung_berdebar': 'Jantung Berdebar',
+                'bengkak_kaki': 'Pembengkakan Kaki'
+                // Tambahkan lebih banyak sesuai dengan value di checkbox
+            };
+            return gejalaMap[gejalaValue] || gejalaValue.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        }
+    </script>
 </body>
 </html>
+
