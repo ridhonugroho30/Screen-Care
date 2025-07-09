@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Screen Care - Skrining Penyakit Lengkap</title>
+    <title>Kesehatan Goonnini - Skrining & Informasi Kesehatan</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,50 +12,108 @@
     <header class="hero">
         <div class="container">
             <nav>
-                <div class="logo">Screen<span>Care</span></div>
+                <div class="logo">Kesehatan<span>Goonnini</span></div>
                 <ul>
                     <li><a href="#home">Beranda</a></li>
-                    <li><a href="#skrining">Skrining</a></li>
+                    <li><a href="#skrining">Skrining Kesehatan</a></li>
+                    <li><a href="#layanan">Layanan Kami</a></li>
                     <li><a href="#artikel">Artikel</a></li>
                     <li><a href="#kontak">Kontak</a></li>
                 </ul>
             </nav>
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Jaga Kesehatan Anda, Kenali Dini Penyakit!</h1>
-                    <p>Mulai skrining kesehatan Anda sekarang dan dapatkan interpretasi hasil yang akurat.</p>
-                    <a href="#skrining" class="btn btn-primary">Mulai Skrining</a>
+                    <h1>Kenali Kesehatanmu, Raih Hidup Sehat!</h1>
+                    <p>Dapatkan informasi akurat dan lakukan skrining dini untuk berbagai kondisi kesehatan.</p>
+                    <a href="#skrining" class="btn btn-primary">Mulai Skrining Sekarang</a>
                 </div>
                 <div class="hero-image">
-                    <img src="https://via.placeholder.com/400x300/a2d9ff/ffffff?text=Dokter+Tersenyum" alt="Dokter Tersenyum" class="animate-float">
+                    <img src="https://via.placeholder.com/400x300/66BB6A/ffffff?text=Dokter+Tersenyum" alt="Dokter Ramah" class="animate-float">
+                    <div class="leaf-decoration leaf-left"></div>
+                    <div class="leaf-decoration leaf-right"></div>
                 </div>
             </div>
         </div>
+        <div class="hero-wave"></div>
     </header>
 
     <main>
+        <section id="layanan" class="services-section">
+            <div class="container">
+                <h2>Layanan Kami untuk Kesehatan Optimal Anda</h2>
+                <p class="section-description">Kami berkomitmen memberikan informasi dan alat skrining terbaik untuk membantu Anda menjaga kesehatan.</p>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Edukasi Kesehatan</h3>
+                        <p>Akses artikel dan panduan terkini seputar pola hidup sehat dan pencegahan penyakit.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-stethoscope"></i>
+                        <h3>Skrining Mandiri</h3>
+                        <p>Lakukan skrining awal untuk berbagai penyakit umum dan dapatkan interpretasi detail.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Pemantauan Progress</h3>
+                        <p>Pantau perkembangan kesehatan Anda dan identifikasi area yang perlu perbaikan.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-user-md"></i>
+                        <h3>Konsultasi Online</h3>
+                        <p>Terhubung dengan profesional medis untuk saran dan panduan lebih lanjut.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="skrining" class="skrining-section">
             <div class="container">
-                <h2>Skrining Kesehatan Anda</h2>
-                <p class="section-description">Pilih gejala atau kondisi yang Anda alami untuk mendapatkan potensi interpretasi.</p>
+                <h2>Mulai Skrining Kesehatan Anda</h2>
+                <p class="section-description">Pilih kategori skrining di bawah ini dan jawab pertanyaan untuk mendapatkan interpretasi awal.</p>
+
                 <form id="skrining-form" class="skrining-form">
+
                     <div class="skrining-category">
-                        <h3><i class="fas fa-lungs"></i> Sistem Pernapasan</h3>
+                        <h3><i class="fas fa-heartbeat"></i> Skrining Hipertensi</h3>
+                        <p>Pilih gejala atau faktor risiko yang relevan:</p>
                         <div class="checkbox-group">
-                            <label><input type="checkbox" name="gejala" value="batuk_kronis"> Batuk Kronis (lebih dari 3 minggu)</label>
-                            <label><input type="checkbox" name="gejala" value="sesak_napas"> Sesak Napas</label>
-                            <label><input type="checkbox" name="gejala" value="nyeri_dada"> Nyeri Dada saat bernapas</label>
-                            <label><input type="checkbox" name="gejala" value="dahak_berdarah"> Dahak Berdarah</label>
+                            <label><input type="checkbox" name="hipertensi_gejala" value="sakit_kepala_berat"> Sakit kepala berat dan terus-menerus</label>
+                            <label><input type="checkbox" name="hipertensi_gejala" value="pandangan_kabur"> Pandangan kabur/ganda</label>
+                            <label><input type="checkbox" name="hipertensi_gejala" value="nyeri_dada_hiper"> Nyeri dada atau sesak napas</label>
+                            <label><input type="checkbox" name="hipertensi_gejala" value="detak_jantung_tidak_teratur"> Detak jantung tidak teratur</label>
+                            <label><input type="checkbox" name="hipertensi_faktor" value="riwayat_keluarga_hiper"> Riwayat keluarga hipertensi</label>
+                            <label><input type="checkbox" name="hipertensi_faktor" value="berat_badan_berlebih"> Berat badan berlebih/obesitas</label>
+                            <label><input type="checkbox" name="hipertensi_faktor" value="kurang_aktivitas_fisik"> Kurang aktivitas fisik</label>
+                            <label><input type="checkbox" name="hipertensi_faktor" value="konsumsi_garam_tinggi"> Konsumsi garam tinggi</label>
                         </div>
                     </div>
 
                     <div class="skrining-category">
-                        <h3><i class="fas fa-stomach"></i> Sistem Pencernaan</h3>
+                        <h3><i class="fas fa-sugar"></i> Skrining Diabetes</h3>
+                        <p>Pilih gejala atau faktor risiko yang relevan:</p>
                         <div class="checkbox-group">
-                            <label><input type="checkbox" name="gejala" value="nyeri_perut"> Nyeri Perut Berulang</label>
-                            <label><input type="checkbox" name="gejala" value="diare_kronis"> Diare Kronis</label>
-                            <label><input type="checkbox" name="gejala" value="konstipasi"> Konstipasi Berkepanjangan</label>
-                            <label><input type="checkbox" name="gejala" value="mual_muntah"> Mual dan Muntah Sering</label>
+                            <label><input type="checkbox" name="diabetes_gejala" value="sering_haus"> Sering merasa haus (polidipsi)</label>
+                            <label><input type="checkbox" name="diabetes_gejala" value="sering_kencing"> Sering buang air kecil, terutama malam hari (poliuria)</label>
+                            <label><input type="checkbox" name="diabetes_gejala" value="sering_lapar"> Sering merasa lapar (polifagi)</label>
+                            <label><input type="checkbox" name="diabetes_gejala" value="berat_badan_turun"> Penurunan berat badan tanpa sebab jelas</label>
+                            <label><input type="checkbox" name="diabetes_gejala" value="luka_sulit_sembuh"> Luka yang sulit sembuh</label>
+                            <label><input type="checkbox" name="diabetes_faktor" value="riwayat_keluarga_diabetes"> Riwayat keluarga diabetes</label>
+                            <label><input type="checkbox" name="diabetes_faktor" value="gaya_hidup_sedentari"> Gaya hidup kurang gerak</label>
+                            <label><input type="checkbox" name="diabetes_faktor" value="kolesterol_tinggi"> Kolesterol tinggi/dislipidemia</label>
+                        </div>
+                    </div>
+
+                    <div class="skrining-category">
+                        <h3><i class="fas fa-brain"></i> Skrining Kesehatan Mental</h3>
+                        <p>Pilih gejala yang Anda alami dalam 2 minggu terakhir:</p>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="mental_gejala" value="mood_rendah"> Merasa sedih, putus asa, atau murung sebagian besar waktu</label>
+                            <label><input type="checkbox" name="mental_gejala" value="hilang_minat"> Kehilangan minat pada aktivitas yang disukai</label>
+                            <label><input type="checkbox" name="mental_gejala" value="gangguan_tidur"> Gangguan tidur (sulit tidur/tidur berlebihan)</label>
+                            <label><input type="checkbox" name="mental_gejala" value="perubahan_nafsu_makan"> Perubahan nafsu makan atau berat badan signifikan</label>
+                            <label><input type="checkbox" name="mental_gejala" value="energi_rendah"> Merasa lelah atau kurang energi</label>
+                            <label><input type="checkbox" name="mental_gejala" value="sulit_konsentrasi"> Sulit berkonsentrasi atau mengambil keputusan</label>
                         </div>
                     </div>
 
@@ -66,31 +124,37 @@
                     <h3>Hasil Skrining Anda:</h3>
                     <div id="interpretasi-detail" class="interpretasi-detail">
                         </div>
-                    <p class="catatan">Catatan: Hasil ini hanyalah interpretasi awal dan bukan diagnosis medis. Selalu konsultasikan dengan tenaga medis profesional untuk diagnosis dan penanganan lebih lanjut.</p>
+                    <p class="catatan">Catatan: Hasil ini hanyalah interpretasi awal berdasarkan data yang Anda berikan dan bukan diagnosis medis. Selalu konsultasikan dengan tenaga medis profesional untuk diagnosis dan penanganan lebih lanjut.</p>
                 </div>
             </div>
         </section>
 
         <section id="artikel" class="artikel-section">
             <div class="container">
-                <h2>Artikel Kesehatan Pilihan</h2>
+                <h2>Kisah Inspiratif & Artikel Terkini</h2>
                 <div class="artikel-grid">
                     <div class="artikel-card">
-                        <img src="https://via.placeholder.com/300x200/c7f0d0/000000?text=Hidup+Sehat" alt="Hidup Sehat">
-                        <h3>Manfaat Pola Hidup Sehat</h3>
-                        <p>Pelajari bagaimana kebiasaan sehat dapat meningkatkan kualitas hidup Anda...</p>
+                        <img src="https://via.placeholder.com/300x200/a2d9ff/000000?text=Hidup+Sehat+1" alt="Gadis Tersenyum">
+                        <h3>Tips Menjaga Imun Tubuh di Musim Pancaroba</h3>
+                        <p>Musim pancaroba rentan penyakit. Pelajari cara menjaga kekebalan tubuh Anda.</p>
                         <a href="#" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="artikel-card">
-                        <img src="https://via.placeholder.com/300x200/c7f0d0/000000?text=Pencegahan" alt="Pencegahan Penyakit">
-                        <h3>Pentingnya Vaksinasi Dewasa</h3>
-                        <p>Vaksinasi tidak hanya untuk anak-anak, dewasa juga membutuhkan perlindungan...</p>
+                        <img src="https://via.placeholder.com/300x200/c7f0d0/000000?text=Keluarga+Sehat" alt="Keluarga Sehat">
+                        <h3>Pentingnya Aktivitas Fisik untuk Keluarga</h3>
+                        <p>Ciptakan kebiasaan sehat bersama keluarga dengan tips aktivitas fisik yang menyenangkan.</p>
                         <a href="#" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="artikel-card">
-                        <img src="https://via.placeholder.com/300x200/c7f0d0/000000?text=Mental+Sehat" alt="Kesehatan Mental">
-                        <h3>Kiat Menjaga Kesehatan Mental</h3>
-                        <p>Stres bisa menyerang siapa saja. Yuk, kenali cara mengelola stres dengan baik...</p>
+                        <img src="https://via.placeholder.com/300x200/ffecb3/000000?text=Makan+Sehat" alt="Salad Sehat">
+                        <h3>Panduan Nutrisi: Pilihan Makanan Sehat Setiap Hari</h3>
+                        <p>Memilih makanan yang tepat adalah kunci. Dapatkan panduan lengkap di sini.</p>
+                        <a href="#" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="artikel-card">
+                        <img src="https://via.placeholder.com/300x200/e0f7fa/000000?text=Meditasi" alt="Meditasi">
+                        <h3>Mengelola Stres: Teknik Relaksasi untuk Ketenangan Pikiran</h3>
+                        <p>Stres dapat mempengaruhi kesehatan fisik dan mental. Pelajari cara mengatasinya.</p>
                         <a href="#" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -100,7 +164,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Kesehatan Kita. Semua Hak Dilindungi.</p>
+            <p>&copy; 2024 Kesehatan Goonnini. Semua Hak Dilindungi.</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -113,82 +177,146 @@
         document.getElementById('skrining-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Mencegah form reload halaman
 
-            const checkboxes = document.querySelectorAll('#skrining-form input[name="gejala"]:checked');
-            const selectedGejala = Array.from(checkboxes).map(cb => cb.value);
-            const interpretasiDetail = document.getElementById('interpretasi-detail');
             const hasilSkriningDiv = document.getElementById('hasil-skrining');
-
+            const interpretasiDetail = document.getElementById('interpretasi-detail');
             let interpretasiHTML = '';
+            let anyGejalaSelected = false;
 
-            if (selectedGejala.length === 0) {
-                interpretasiHTML = '<p class="no-gejala">Anda belum memilih gejala apapun. Silakan pilih gejala yang Anda alami.</p>';
-            } else {
-                interpretasiHTML += '<p class="gejala-terpilih">Gejala yang Anda pilih:</p><ul>';
-                selectedGejala.forEach(gejala => {
-                    interpretasiHTML += `<li>${getGejalaDisplayName(gejala)}</li>`;
-                });
-                interpretasiHTML += '</ul>';
+            // --- Interpretasi Hipertensi ---
+            const hipertensiGejala = Array.from(document.querySelectorAll('input[name="hipertensi_gejala"]:checked')).map(cb => cb.value);
+            const hipertensiFaktor = Array.from(document.querySelectorAll('input[name="hipertensi_faktor"]:checked')).map(cb => cb.value);
+            const totalHipertensiSelected = hipertensiGejala.length + hipertensiFaktor.length;
 
-                interpretasiHTML += '<p class="potensi-kondisi">Berdasarkan gejala yang Anda pilih, berikut potensi kondisi yang perlu diwaspadai:</p>';
+            if (totalHipertensiSelected > 0) {
+                anyGejalaSelected = true;
+                interpretasiHTML += `
+                    <div class="kondisi-item">
+                        <h4>Potensi Risiko Hipertensi (Tekanan Darah Tinggi)</h4>
+                        <p>Anda memilih <strong>${totalHipertensiSelected}</strong> indikator terkait hipertensi. Berdasarkan pilihan Anda:</p>
+                        <ul>
+                `;
+                if (hipertensiGejala.length > 0) {
+                    interpretasiHTML += `<li><strong>Gejala:</strong> ${hipertensiGejala.map(getGejalaDisplayName).join(', ')}</li>`;
+                }
+                if (hipertensiFaktor.length > 0) {
+                    interpretasiHTML += `<li><strong>Faktor Risiko:</strong> ${hipertensiFaktor.map(getGejalaDisplayName).join(', ')}</li>`;
+                }
+                interpretasiHTML += `</ul>`;
 
-                // Logika interpretasi sederhana
-                if (selectedGejala.includes('batuk_kronis') || selectedGejala.includes('sesak_napas') || selectedGejala.includes('nyeri_dada')) {
-                    interpretasiHTML += `
-                        <div class="kondisi-item">
-                            <h4>Potensi Masalah Pernapasan</h4>
-                            <p>Gejala seperti batuk kronis, sesak napas, atau nyeri dada dapat mengindikasikan berbagai kondisi pernapasan seperti **bronkitis, asma, PPOK, atau bahkan infeksi paru-paru**. Sangat disarankan untuk berkonsultasi dengan dokter untuk pemeriksaan lebih lanjut, terutama jika gejala memburuk atau disertai demam tinggi dan penurunan berat badan.</p>
-                            <p><strong>Tindakan yang direkomendasikan:</strong> Segera periksakan diri ke dokter spesialis paru. Lakukan rontgen dada atau tes fungsi paru.</p>
-                        </div>
-                    `;
+                if (hipertensiGejala.length >= 2 || (hipertensiGejala.length >= 1 && hipertensiFaktor.length >= 2)) {
+                    interpretasiHTML += `<p>Kombinasi gejala dan/atau faktor risiko yang Anda alami **meningkatkan potensi** adanya tekanan darah tinggi atau risiko tinggi mengembangkannya. Hipertensi sering disebut "silent killer" karena gejalanya bisa tidak kentara.</p>
+                                          <p><strong>Rekomendasi:</strong> Sangat dianjurkan untuk segera **mengukur tekanan darah** Anda di rumah atau fasilitas kesehatan terdekat. Konsultasikan hasil dengan dokter untuk evaluasi lebih lanjut dan rencana penanganan. Perubahan gaya hidup seperti diet rendah garam, olahraga teratur, dan menjaga berat badan ideal sangat penting.</p>`;
+                } else if (totalHipertensiSelected > 0) {
+                    interpretasiHTML += `<p>Beberapa faktor atau gejala yang Anda pilih mungkin mengindikasikan **perlu perhatian** terhadap tekanan darah. Meskipun risikonya tidak setinggi jika banyak gejala/faktor risiko terkumpul, memantau tekanan darah secara berkala adalah langkah bijak.</p>
+                                          <p><strong>Rekomendasi:</strong> Lakukan pengukuran tekanan darah secara rutin. Terapkan gaya hidup sehat untuk mencegah peningkatan risiko di masa mendatang.</p>`;
                 }
-                if (selectedGejala.includes('nyeri_perut') || selectedGejala.includes('diare_kronis') || selectedGejala.includes('mual_muntah')) {
-                    interpretasiHTML += `
-                        <div class="kondisi-item">
-                            <h4>Potensi Gangguan Pencernaan</h4>
-                            <p>Nyeri perut berulang, diare kronis, mual, dan muntah bisa menjadi tanda **gastritis, IBS (Irritable Bowel Syndrome), infeksi saluran cerna, atau masalah usus lainnya**. Perhatikan pola makan dan tingkat stres Anda. Hindari makanan pemicu.</p>
-                            <p><strong>Tindakan yang direkomendasikan:</strong> Konsultasi dengan dokter umum atau spesialis penyakit dalam. Pertimbangkan tes feses atau endoskopi jika diperlukan.</p>
-                        </div>
-                    `;
-                }
-                // Tambahkan lebih banyak logika interpretasi di sini
-                if (selectedGejala.includes('jantung_berdebar')) {
-                    interpretasiHTML += `
-                        <div class="kondisi-item">
-                            <h4>Potensi Masalah Jantung</h4>
-                            <p>Jantung berdebar bisa disebabkan oleh banyak hal, mulai dari stres, kafein berlebihan, hingga **aritmia jantung atau masalah tiroid**. Jika disertai nyeri dada, pusing, atau pingsan, segera cari bantuan medis darurat.</p>
-                            <p><strong>Tindakan yang direkomendasikan:</strong> Segera periksakan diri ke dokter, khususnya jika gejala sering terjadi atau parah. Mungkin diperlukan EKG atau pemeriksaan jantung lainnya.</p>
-                        </div>
-                    `;
-                }
+                interpretasiHTML += `</div>`;
+            }
 
-                if (interpretasiHTML === interpretasiHTML.split('<p class="potensi-kondisi">')[0] + '<p class="potensi-kondisi">Berdasarkan gejala yang Anda pilih, berikut potensi kondisi yang perlu diwaspadai:</p>') {
-                    interpretasiHTML += '<p class="tidak-ditemukan">Dari gejala yang Anda pilih, tidak ada interpretasi spesifik yang dapat diberikan saat ini. Namun, jika Anda khawatir atau gejala berlanjut, sangat disarankan untuk berkonsultasi dengan dokter.</p>';
+            // --- Interpretasi Diabetes ---
+            const diabetesGejala = Array.from(document.querySelectorAll('input[name="diabetes_gejala"]:checked')).map(cb => cb.value);
+            const diabetesFaktor = Array.from(document.querySelectorAll('input[name="diabetes_faktor"]:checked')).map(cb => cb.value);
+            const totalDiabetesSelected = diabetesGejala.length + diabetesFaktor.length;
+
+            if (totalDiabetesSelected > 0) {
+                anyGejalaSelected = true;
+                interpretasiHTML += `
+                    <div class="kondisi-item">
+                        <h4>Potensi Risiko Diabetes (Kencing Manis)</h4>
+                        <p>Anda memilih <strong>${totalDiabetesSelected}</strong> indikator terkait diabetes. Berdasarkan pilihan Anda:</p>
+                        <ul>
+                `;
+                if (diabetesGejala.length > 0) {
+                    interpretasiHTML += `<li><strong>Gejala:</strong> ${diabetesGejala.map(getGejalaDisplayName).join(', ')}</li>`;
                 }
+                if (diabetesFaktor.length > 0) {
+                    interpretasiHTML += `<li><strong>Faktor Risiko:</strong> ${diabetesFaktor.map(getGejalaDisplayName).join(', ')}</li>`;
+                }
+                interpretasiHTML += `</ul>`;
+
+                if (diabetesGejala.length >= 2 || (diabetesGejala.length >= 1 && diabetesFaktor.length >= 2)) {
+                    interpretasiHTML += `<p>Kombinasi gejala klasik diabetes (3P: poliuria, polidipsi, polifagi) atau gabungan dengan faktor risiko yang Anda pilih **meningkatkan kemungkinan** Anda memiliki diabetes atau prediabetes. Deteksi dini sangat penting untuk mencegah komplikasi.</p>
+                                          <p><strong>Rekomendasi:</strong> Segera lakukan **tes gula darah puasa, gula darah 2 jam post prandial (setelah makan), atau HbA1c**. Konsultasikan hasil dengan dokter untuk diagnosis dan pengelolaan. Atur pola makan, batasi gula, dan tingkatkan aktivitas fisik.</p>`;
+                } else if (totalDiabetesSelected > 0) {
+                    interpretasiHTML += `<p>Beberapa faktor atau gejala yang Anda pilih mungkin mengindikasikan **perlu perhatian** terhadap kadar gula darah. Jika Anda memiliki riwayat keluarga atau gaya hidup kurang sehat, risiko diabetes bisa meningkat.</p>
+                                          <p><strong>Rekomendasi:</strong> Pantau asupan gula dan karbohidrat. Pertimbangkan untuk melakukan pemeriksaan gula darah berkala, terutama jika ada riwayat keluarga.</p>`;
+                }
+                interpretasiHTML += `</div>`;
+            }
+
+            // --- Interpretasi Kesehatan Mental ---
+            const mentalGejala = Array.from(document.querySelectorAll('input[name="mental_gejala"]:checked')).map(cb => cb.value);
+            const totalMentalSelected = mentalGejala.length;
+
+            if (totalMentalSelected > 0) {
+                anyGejalaSelected = true;
+                interpretasiHTML += `
+                    <div class="kondisi-item">
+                        <h4>Potensi Perhatian Kesehatan Mental</h4>
+                        <p>Anda memilih <strong>${totalMentalSelected}</strong> gejala terkait kesehatan mental. Berdasarkan pilihan Anda:</p>
+                        <ul>
+                `;
+                if (mentalGejala.length > 0) {
+                    interpretasiHTML += `<li><strong>Gejala:</strong> ${mentalGejala.map(getGejalaDisplayName).join(', ')}</li>`;
+                }
+                interpretasiHTML += `</ul>`;
+
+                if (totalMentalSelected >= 3) {
+                    interpretasiHTML += `<p>Jika Anda mengalami beberapa gejala ini secara konsisten selama dua minggu atau lebih, ini bisa menjadi indikasi awal adanya **gangguan suasana hati seperti depresi atau kecemasan**. Kondisi ini dapat memengaruhi kualitas hidup secara signifikan.</p>
+                                          <p><strong>Rekomendasi:</strong> Sangat disarankan untuk mencari **bantuan dari profesional kesehatan mental** (psikolog atau psikiater). Berbicara tentang perasaan Anda adalah langkah pertama yang kuat. Jangan ragu mencari dukungan.</p>`;
+                } else if (totalMentalSelected > 0) {
+                    interpretasiHTML += `<p>Gejala yang Anda pilih mungkin merupakan respons normal terhadap stres atau kelelahan. Namun, jika perasaan ini menetap atau semakin intens, penting untuk tidak mengabaikannya.</p>
+                                          <p><strong>Rekomendasi:</strong> Perhatikan pola tidur dan makan Anda. Luangkan waktu untuk relaksasi. Jika gejala berlanjut atau mengganggu aktivitas sehari-hari, pertimbangkan untuk berbicara dengan konselor atau dokter umum Anda.</p>`;
+                }
+                interpretasiHTML += `</div>`;
+            }
+
+
+            // Tampilan hasil jika tidak ada gejala yang dipilih
+            if (!anyGejalaSelected) {
+                interpretasiHTML = '<p class="no-gejala">Anda belum memilih gejala apapun. Silakan pilih gejala yang Anda alami untuk mendapatkan interpretasi.</p>';
+            } else if (interpretasiHTML === '') {
+                 interpretasiHTML = '<p class="tidak-ditemukan">Dari gejala yang Anda pilih, tidak ada interpretasi spesifik yang dapat diberikan saat ini. Namun, jika Anda khawatir atau gejala berlanjut, sangat disarankan untuk berkonsultasi dengan dokter.</p>';
             }
 
             interpretasiDetail.innerHTML = interpretasiHTML;
             hasilSkriningDiv.style.display = 'block'; // Tampilkan hasil
-            hasilSkriningDiv.scrollIntoView({ behavior: 'smooth' }); // Gulir ke hasil
+            hasilSkriningDiv.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Gulir ke hasil
         });
 
-        // Fungsi pembantu untuk mendapatkan nama tampilan gejala
+        // Fungsi pembantu untuk mendapatkan nama tampilan gejala yang lebih baik
         function getGejalaDisplayName(gejalaValue) {
             const gejalaMap = {
-                'batuk_kronis': 'Batuk Kronis',
-                'sesak_napas': 'Sesak Napas',
-                'nyeri_dada': 'Nyeri Dada saat bernapas',
-                'dahak_berdarah': 'Dahak Berdarah',
-                'nyeri_perut': 'Nyeri Perut Berulang',
-                'diare_kronis': 'Diare Kronis',
-                'konstipasi': 'Konstipasi Berkepanjangan',
-                'mual_muntah': 'Mual dan Muntah Sering',
-                'jantung_berdebar': 'Jantung Berdebar',
-                'bengkak_kaki': 'Pembengkakan Kaki'
-                // Tambahkan lebih banyak sesuai dengan value di checkbox
+                // Hipertensi
+                'sakit_kepala_berat': 'Sakit kepala berat dan terus-menerus',
+                'pandangan_kabur': 'Pandangan kabur/ganda',
+                'nyeri_dada_hiper': 'Nyeri dada atau sesak napas',
+                'detak_jantung_tidak_teratur': 'Detak jantung tidak teratur',
+                'riwayat_keluarga_hiper': 'Riwayat keluarga hipertensi',
+                'berat_badan_berlebih': 'Berat badan berlebih/obesitas',
+                'kurang_aktivitas_fisik': 'Kurang aktivitas fisik',
+                'konsumsi_garam_tinggi': 'Konsumsi garam tinggi',
+                // Diabetes
+                'sering_haus': 'Sering merasa haus',
+                'sering_kencing': 'Sering buang air kecil (terutama malam)',
+                'sering_lapar': 'Sering merasa lapar',
+                'berat_badan_turun': 'Penurunan berat badan tanpa sebab',
+                'luka_sulit_sembuh': 'Luka yang sulit sembuh',
+                'riwayat_keluarga_diabetes': 'Riwayat keluarga diabetes',
+                'gaya_hidup_sedentari': 'Gaya hidup kurang gerak',
+                'kolesterol_tinggi': 'Kolesterol tinggi/dislipidemia',
+                // Kesehatan Mental
+                'mood_rendah': 'Merasa sedih, putus asa, atau murung',
+                'hilang_minat': 'Kehilangan minat pada aktivitas',
+                'gangguan_tidur': 'Gangguan tidur',
+                'perubahan_nafsu_makan': 'Perubahan nafsu makan/berat badan',
+                'energi_rendah': 'Merasa lelah atau kurang energi',
+                'sulit_konsentrasi': 'Sulit berkonsentrasi atau mengambil keputusan',
+                // Default fallback
+                'default': gejalaValue.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
             };
-            return gejalaMap[gejalaValue] || gejalaValue.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+            return gejalaMap[gejalaValue] || gejalaMap['default'];
         }
     </script>
 </body>
 </html>
-
